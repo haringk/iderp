@@ -1,0 +1,9 @@
+{
+  "name": "iderp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "frappe build --apps iderp",
+    "watch": "frappe watch --apps iderp"
+  }
+}
