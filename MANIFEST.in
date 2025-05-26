@@ -2,10 +2,5 @@ include README.md
 include MANIFEST.in
 include requirements.txt
 recursive-include iderp *
-
 recursive-include public *
-recursive-include config *
-include hooks.py
-include modules.txt
-
 
