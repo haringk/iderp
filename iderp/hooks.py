@@ -5,17 +5,8 @@ app_description = "Custom app for ERPNext"
 app_email = "ai@idstudio.org"
 app_license = "MIT"
 
-after_install = "iderp.install.after_install"
 
-doc_events = {
-    "Quotation": {"validate": "iderp.utils.discounts.apply_discounts"},
-    "Sales Order": {"validate": "iderp.utils.discounts.apply_discounts"},
-    "Sales Invoice": {"validate": "iderp.utils.discounts.apply_discounts"},
-}
-
-
-override_whitelisted_methods = {
-    "erpnext.selling.doctype.quotation.quotation.make_sales_order": "iderp.overrides.make_sales_order",
-    "erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "iderp.overrides.make_sales_invoice",
-}
+# Include custom JS and CSS assets
+app_include_js = "/assets/iderp/js/iderp.js"
+app_include_css = "/assets/iderp/css/iderp.css"
 
