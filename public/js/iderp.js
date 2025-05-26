@@ -1,0 +1,1 @@
+// iderp app js placeholder
