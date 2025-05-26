@@ -1,0 +1,13 @@
+{
+ "doctype": "DocType",
+ "name": "Customer Discount",
+ "module": "iderp",
+ "custom": 1,
+ "fields": [
+  {"label": "Customer", "fieldname": "customer", "fieldtype": "Link", "options": "Customer", "reqd": 1},
+  {"label": "Discount Percentage", "fieldname": "discount_percentage", "fieldtype": "Percent", "reqd": 1}
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1}
+ ]
+}
