@@ -5,6 +5,7 @@ app_description = "Custom app for ERPNext"
 app_email = "ai@idstudio.org"
 app_license = "MIT"
 
+
 # Hooks
 after_install = "iderp.setup.install.after_install"
 
