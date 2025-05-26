@@ -1,9 +1,12 @@
+
 """Installer hooks to create custom fields required by the app."""
+
 
 import frappe
 
 
 def after_install():
+
     # Example: ensure custom fields exist for item dimensions
     create_custom_field(
         doctype="Sales Invoice Item",

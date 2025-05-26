@@ -1,3 +1,4 @@
+
 """Utility functions for quantity and customer-based discounts."""
 
 import frappe

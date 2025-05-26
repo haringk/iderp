@@ -25,3 +25,4 @@ bench --site tuo_sito install-app iderp
 Gli asset pubblici si trovano in `public/js/iderp.js` e `public/css/iderp.css`.
 Questi vengono inclusi globalmente tramite `hooks.py` affinché la build degli asset
 non abbia percorsi mancanti.
+
