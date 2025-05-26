@@ -1,0 +1,10 @@
+{
+ "doctype": "DocType",
+ "name": "Customer Discount",
+ "module": "iderp",
+ "custom": 1,
+ "fields": [
+  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer"},
+  {"fieldname": "discount_percentage", "fieldtype": "Float", "label": "Discount %"}
+ ]
+}
