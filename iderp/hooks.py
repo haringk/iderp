@@ -13,7 +13,9 @@ doc_events = {
     "Sales Invoice": {"validate": "iderp.utils.discounts.apply_discounts"},
 }
 
+
 override_whitelisted_methods = {
     "erpnext.selling.doctype.quotation.quotation.make_sales_order": "iderp.overrides.make_sales_order",
     "erpnext.selling.doctype.sales_order.sales_order.make_sales_invoice": "iderp.overrides.make_sales_invoice",
 }
+

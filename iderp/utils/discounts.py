@@ -1,6 +1,7 @@
 import frappe
 
 
+
 def get_quantity_discount(qty: float) -> float:
     """Return discount percentage based on quantity."""
     if qty >= 100:
