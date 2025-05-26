@@ -3,33 +3,10 @@
  "name": "Customer Discount",
  "module": "iderp",
 
- "custom": 0,
- "istable": 0,
- "editable_grid": 0,
- "autoname": "field:customer",
+ "custom": 1,
  "fields": [
-  {
-   "fieldname": "customer",
-   "fieldtype": "Link",
-   "options": "Customer",
-   "label": "Customer",
-   "reqd": 1
-  },
-  {
-   "fieldname": "discount_percentage",
-   "fieldtype": "Float",
-   "label": "Discount Percentage",
-   "reqd": 1
-  }
- ],
- "permissions": [
-  {
-   "role": "System Manager",
-   "read": 1,
-   "write": 1,
-   "create": 1,
-   "delete": 1
-  }
+  {"fieldname": "customer", "fieldtype": "Link", "label": "Customer", "options": "Customer"},
+  {"fieldname": "discount_percentage", "fieldtype": "Float", "label": "Discount %"}
 
  ]
 }

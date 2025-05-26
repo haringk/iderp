@@ -1,27 +1,26 @@
+
+"""Utility functions for quantity and customer-based discounts."""
+
 import frappe
 
 
-
-def get_quantity_discount(qty: float) -> float:
-    """Return discount percentage based on quantity."""
-    if qty >= 100:
-        return 10.0
-    if qty >= 50:
-        return 5.0
-    return 0.0
-
-
-def get_customer_discount(customer: str) -> float:
-    """Fetch discount percentage for the given customer."""
-    return (
-        frappe.db.get_value("Customer Discount", {"customer": customer}, "discount_percentage")
-        or 0.0
+def get_customer_discount(customer):
+    """Return a discount percentage for the given customer if configured."""
+    doc = frappe.get_all(
+        "Customer Discount",
+        filters={"customer": customer},
+        fields=["discount_percentage"],
+        limit=1,
     )
+    if doc:
+        return doc[0].discount_percentage or 0
+    return 0
 
 
-def apply_discounts(doc, method=None):
-    """Apply automatic discounts on sales documents."""
-    customer_discount = get_customer_discount(doc.customer) if getattr(doc, "customer", None) else 0.0
-    for item in getattr(doc, "items", []):
-        qty_discount = get_quantity_discount(item.get("qty", 0))
-        item.discount_percentage = qty_discount + customer_discount
+def apply_quantity_discount(quantity, breaks):
+    """Return the discount percentage based on quantity breaks."""
+    applicable = 0
+    for qty, pct in sorted(breaks.items()):
+        if quantity >= qty:
+            applicable = pct
+    return applicable
